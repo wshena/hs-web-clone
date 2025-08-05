@@ -1,7 +1,24 @@
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
-import { IoCall } from "react-icons/io5";
+import { IoCall, IoMenu } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { FaAngleDown, FaAngleUp, FaCheck } from "react-icons/fa";
+
+export const CheckIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaCheck color={color} size={size} className={style} />
+}
+
+export const AngleDownIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaAngleDown color={color} size={size} className={style} />
+}
+
+export const AngleUpIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaAngleUp color={color} size={size} className={style} />
+}
+
+export const MenuIcon = ({color, size, style}:ICON_PROP) => {
+  return <IoMenu color={color} size={size} className={style} />
+}
 
 export const MapIcon = ({color, size, style}:ICON_PROP) => {
   return <MdLocationOn color={color} size={size} className={style} />

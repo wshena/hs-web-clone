@@ -138,5 +138,9 @@ body {
 }
 
 .container {
-  @apply py-[2rem] px-[1.5rem] lg:px-[3.5rem];
+  @apply py-[2rem] px-[1.5rem] xl:px-[3.5rem];
+}
+
+.container-px {
+  @apply px-[1.5rem] xl:px-[3.5rem];
 }

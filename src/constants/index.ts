@@ -1,4 +1,4 @@
-export const FOOTER_QUICK_LINKS = [
+export const FOOTER_QUICK_LINKS:LINK_PROP[] = [
   {
     id: 1,
     label: 'tentang kami',
@@ -22,6 +22,54 @@ export const FOOTER_QUICK_LINKS = [
   {
     id: 5,
     label: 'proyek',
+    link: '#'
+  },
+]
+
+export const NAV_LINKS:LINK_PROP[] = [
+  {
+    id: 1,
+    label: 'beranda',
+    link: '/'
+  },
+  {
+    id: 2,
+    label: 'tentang kami',
+    link: '#'
+  },
+  {
+    id: 3,
+    label: 'produk',
+    link: '#'
+  },
+  {
+    id: 4,
+    label: 'layanan',
+    link: '#'
+  },
+  {
+    id: 5,
+    label: 'karier',
+    link: '#'
+  },
+  {
+    id: 6,
+    label: 'projek',
+    link: '#'
+  },
+  {
+    id: 7,
+    label: 'blog',
+    link: '#'
+  },
+  {
+    id: 8,
+    label: 'galeri',
+    link: '#'
+  },
+  {
+    id: 9,
+    label: 'kontak',
     link: '#'
   },
 ]

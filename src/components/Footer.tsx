@@ -31,11 +31,15 @@ const QuickLinksSection = () => {
   return (
     <div className="flex flex-col items-start gap-[14px] capitalize">
       <h1 className='font-bold'>quick links</h1>
-      {FOOTER_QUICK_LINKS.map((item:LINK_PROP) => (
-        <Link href={item.link} key={item.id}>
-          <h2 className='text-gray-400 hover:text-white'>{item.label}</h2>
-        </Link>
-      ))}
+      <ul>
+        {FOOTER_QUICK_LINKS.map((item:LINK_PROP) => (
+          <li key={item.id}>
+            <Link href={item.link}>
+              <h2 className='text-gray-400 hover:text-white'>{item.label}</h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
@@ -103,7 +107,7 @@ const CopyrightSection = () => {
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-900 text-white'>
+    <section id='footer' className='bg-gray-900 text-white'>
       <div className='content-wrapper container'>
         <div className="pb-[1.5rem] border-b border-b-gray-400">
           <FooterContent />
@@ -112,7 +116,7 @@ const Footer = () => {
           <CopyrightSection />
         </div>
       </div>
-    </footer>
+    </section>
   )
 }
 
