@@ -1,27 +1,18 @@
+import BgButton from "@/components/buttons/BgButton";
+import OutlineButton from "@/components/buttons/OutlineButton";
+import Jumbotron from "@/components/Jumbotron";
 import MainWrapper from "@/components/MainWrapper";
-
-const Jumbotron = ({bg, content}:{bg:string, content:React.ReactNode}) => {
-  return (
-    <div className="relative w-full h-[750px]" style={{
-      backgroundImage: `url("${bg}")`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover'
-    }}>
-      <div className="absolute w-full h-full top-0 left-0 bg-black/50 flex items-center justify-center text-white">
-        {content}
-      </div>
-    </div>
-  )
-}
+import { NUMBER_HOME_SECTION } from "@/constants";
+import { cn } from "@/lib/utils";
 
 const HomeJumbotronContent = () => {
   return (
-    <div className="flex flex-col text-center gap-[15px] w-[75%]">
-      <h1 className="font-bold text-[4rem] leading-[80px]">Solusi Digital Terdepan untuk Bisnis Modern</h1>
-      <span className="text-[1.7rem]">Kami menghadirkan inovasi teknologi terbaru untuk membantu transformasi digital perusahaan Anda dengan solusi yang efektif dan efisien</span>
-      <div className="flex items-center gap-[20px]">
-        <button>1</button>
-        <button>2</button>
+    <div className="flex flex-col items-center text-center gap-[15px] w-[90%] md:w-[75%] 2xl:w-[50%]">
+      <h1 className="font-bold text-[2rem] md:text-[3rem] lg:text-[4rem] lg:leading-[80px]">Solusi Digital Terdepan untuk Bisnis Modern</h1>
+      <span className="text-[1rem] md:text-[1rem] lg:text-[1.7rem]">Kami menghadirkan inovasi teknologi terbaru untuk membantu transformasi digital perusahaan Anda dengan solusi yang efektif dan efisien</span>
+      <div className="flex flex-col md:flex-row items-center gap-[20px]">
+        <BgButton label="konsultasi gratis" style="bg-blue-500 hover:bg-blue-700 transition-all duration-300 ease-in-out" />
+        <OutlineButton label="lihat portofolio" style="border border-white text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out" />
       </div>
     </div>
   )
@@ -32,6 +23,20 @@ export default function Home() {
     <MainWrapper>
       {/* section jumbotron */}
       <Jumbotron bg="/image/homeJumbotronBG.jpg" content={<HomeJumbotronContent />} />
+
+      {/* Number section */}
+      <section id="numberSection" className="flex items-center justify-center py-[1.5rem]">
+        <ul className="grid grid-cols-2 md:flex md:items-center md:justify-between w-[90%] lg:w-[70%]">
+          {NUMBER_HOME_SECTION.map((item:any) => (
+            <li key={item.id} className="flex flex-col items-center">
+              <span className={cn(
+                'text-[2.3rem] font-bold'
+              )}>{item.count}</span>
+              <span className="text-[.9rem] md:text-[1rem] capitalize">{item.label}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
     </MainWrapper>
   );
 }

@@ -74,6 +74,29 @@ export const NAV_LINKS:LINK_PROP[] = [
   },
 ]
 
+export const NUMBER_HOME_SECTION = [
+  {
+    id: 1,
+    count: '6+',
+    label: 'layanan profesional'
+  },
+  {
+    id: 2,
+    count: '24+',
+    label: 'proyek selesai'
+  },
+  {
+    id: 3,
+    count: '30+',
+    label: 'klien puas'
+  },
+  {
+    id: 4,
+    count: '8+',
+    label: 'tahun pengalaman'
+  },
+]
+
 export const KONTAK = 'Jl. Sudirman No. 123, Jakarta Pusat 10220, Indonesia'
 export const TELP = '+62 21 1234 5678'
 export const EMAIL = 'info@digitalsolusi.com'
