@@ -7,5 +7,5 @@ interface LINK_PROP {
 interface ICON_PROP {
   size: number,
   color: string,
-  style: string
+  style?: string
 }

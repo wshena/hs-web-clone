@@ -100,3 +100,81 @@ export const NUMBER_HOME_SECTION = [
 export const KONTAK = 'Jl. Sudirman No. 123, Jakarta Pusat 10220, Indonesia'
 export const TELP = '+62 21 1234 5678'
 export const EMAIL = 'info@digitalsolusi.com'
+
+export const SERVICES = [
+  {
+    id: 1,
+    title: 'pengembangan aplikasi web',
+    desc: 'Membangun aplikasi web modern dan responsif dengan teknologi terdepan',
+    checklist: 'Kami menyediakan layanan pengembangan ap...',
+    image: '/image/services1.jpg'
+  },
+  {
+    id: 2,
+    title: 'aplikasi mobile',
+    desc: 'Pengembangan aplikasi mobile native dan cross-platform untuk iOS dan Android',
+    checklist: 'Kembangkan aplikasi mobile yang powerful...',
+    image: '/image/services2.jpg'
+  },
+  {
+    id: 3,
+    title: 'Sistem Manajemen Enterprise (ERP)',
+    desc: 'Solusi ERP terintegrasi untuk mengoptimalkan operasional bisnis Anda',
+    checklist: 'Tingkatkan efisiensi operasional perusah...',
+    image: '/image/services3.jpg'
+  },
+]
+
+export const PROJECTS = [
+  {
+    id: 1,
+    title: 'portal pembelajaran online EduTech',
+    desc: 'Platform e-learning lengkap dengan fitur video conference, quiz, dan sertifikasi digital',
+    type: 'aplikasi web',
+    projectType: 'live site',
+    date: '2025',
+    image: '/image/proyek1.jpg'
+  },
+  {
+    id: 2,
+    title: 'portal pembelajaran online EduTech',
+    desc: 'Platform e-learning lengkap dengan fitur video conference, quiz, dan sertifikasi digital',
+    type: 'aplikasi web',
+    projectType: 'live site',
+    date: '2025',
+    image: '/image/proyek2.png'
+  },
+  {
+    id: 3,
+    title: 'portal pembelajaran online EduTech',
+    desc: 'Platform e-learning lengkap dengan fitur video conference, quiz, dan sertifikasi digital',
+    type: 'aplikasi web',
+    projectType: 'live site',
+    date: '2025',
+    image: '/image/proyek3.jpg'
+  },
+]
+
+export const TESTIMONIES = [
+  {
+    id: 1,
+    name: 'budi santoso',
+    position: 'ceo',
+    testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
+    star: 5
+  },
+  {
+    id: 2,
+    name: 'budi santoso',
+    position: 'ceo',
+    testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
+    star: 5
+  },
+  {
+    id: 3,
+    name: 'budi santoso',
+    position: 'ceo',
+    testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
+    star: 5
+  }
+]

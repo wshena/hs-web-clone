@@ -1,8 +1,20 @@
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { IoCall, IoMenu } from "react-icons/io5";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
-import { FaAngleDown, FaAngleUp, FaCheck } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaGears } from "react-icons/fa6";
+import { FaAngleDown, FaAngleUp, FaCheck, FaStar, FaArrowRight } from "react-icons/fa";
+
+export const GearIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaGears color={color} size={size} className={style} />
+}
+
+export const ArrowRightIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaArrowRight color={color} size={size} className={style} />
+}
+
+export const StarIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaStar color={color} size={size} className={style} />
+}
 
 export const CheckIcon = ({color, size, style}:ICON_PROP) => {
   return <FaCheck color={color} size={size} className={style} />
