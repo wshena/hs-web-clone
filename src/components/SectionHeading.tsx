@@ -6,10 +6,10 @@ interface Props {
   iconLabel: string,
   icon: React.ReactNode,
   heading: string,
-  paragraph: string,
+  paragraph?: string,
   iconColor: string,
   headingColor: string,
-  paragraphColor: string,
+  paragraphColor?: string,
 }
 
 const SectionHeading = ({icon, iconLabel, heading, paragraph, iconColor, headingColor, paragraphColor}:Props) => {
@@ -20,10 +20,12 @@ const SectionHeading = ({icon, iconLabel, heading, paragraph, iconColor, heading
         "capitalize text-3xl md:text-5xl font-bold",
         headingColor
       )}>{heading}</h1>
-      <p className={cn(
-        "text-xl max-w-3xl mx-auto leading-relaxed",
-        paragraphColor
-      )}>{paragraph}</p>
+      {paragraph && (
+        <p className={cn(
+          "text-xl max-w-3xl mx-auto leading-relaxed",
+          paragraphColor
+        )}>{paragraph}</p>
+      )}
     </div>
   )
 }

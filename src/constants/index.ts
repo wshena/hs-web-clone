@@ -35,7 +35,7 @@ export const NAV_LINKS:LINK_PROP[] = [
   {
     id: 2,
     label: 'tentang kami',
-    link: '#'
+    link: '/about'
   },
   {
     id: 3,

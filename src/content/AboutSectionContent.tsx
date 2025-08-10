@@ -44,7 +44,7 @@ const PositiveTraits = [
   </div>,
 ]
 
-const AboutContent = ({image}:{image:React.ReactNode}) => {
+const AboutSectionContent = ({image}:{image:React.ReactNode}) => {
   return (
     <div className="flex flex-col lg:flex-row gap-7 lg:gap-0 items-center justify-between">
       <div className="order-2 lg:order-1 flex flex-col items-start gap-6 w-full lg:w-[50%]">
@@ -92,4 +92,4 @@ const AboutContent = ({image}:{image:React.ReactNode}) => {
   )
 }
 
-export default AboutContent
+export default AboutSectionContent
