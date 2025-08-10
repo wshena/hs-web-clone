@@ -161,20 +161,53 @@ export const TESTIMONIES = [
     name: 'budi santoso',
     position: 'ceo',
     testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
-    star: 5
+    star: 5,
+    profilePicture: '/image/avatar.jpg'
   },
   {
     id: 2,
     name: 'budi santoso',
     position: 'ceo',
     testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
-    star: 5
+    star: 5,
+    profilePicture: '/image/avatar.jpg'
   },
   {
     id: 3,
     name: 'budi santoso',
     position: 'ceo',
     testi: 'Tim Digital Solusi Nusantara berhasil mengembangkan sistem ERP yang sangat membantu operasional perusahaan kami. Mereka profesional, responsif, dan selalu memberikan solusi terbaik. Highly recommended!',
-    star: 5
+    star: 5,
+    profilePicture: '/image/avatar.jpg'
   }
 ]
+
+export const TRUST_INDICATOR = [
+  {
+    id: 1,
+    label: 'klien puas',
+    number: '100+'
+  },
+  {
+    id: 2,
+    label: 'rating client',
+    number: '4.9/5'
+  },
+  {
+    id: 3,
+    label: 'satisfaction',
+    number: '99%'
+  },
+]
+
+export const ARTICLES = {
+  id: 1,
+  title: 'Artificial Intelegence dalam Pengembangan Software Modern',
+  desc: 'Eksplorasi bagaimana AI mengubah landscape pengembangan software dan dampaknya terhadap industri teknologi.',
+  author: 'admin',
+  date: '21 Jan 2025',
+  read: '156',
+  type: 'Technology Trends',
+  time: '8 min',
+  image: '/image/article1.png'
+}
