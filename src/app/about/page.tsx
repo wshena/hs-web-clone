@@ -1,20 +1,14 @@
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
-import ArticleCard from "@/components/cards/ArticleCard";
-import ProjectCard from "@/components/cards/ProjectCard";
-import ServiceCard from "@/components/cards/ServiceCard";
-import TestimoniCard from "@/components/cards/TestimoniCard";
+import EmployeeCard from "@/components/cards/EmployeeCard";
 import WhyUsCard from "@/components/cards/WhyUsCard";
-import { ArrowRightIcon, CallIcon, GearIcon, UserIcon } from "@/components/Icons";
+import { CallIcon, GearIcon, UserIcon } from "@/components/Icons";
 import Jumbotron from "@/components/Jumbotron";
 import MainWrapper from "@/components/MainWrapper";
 import SectionHeading from "@/components/SectionHeading";
-import { ARTICLES, NUMBER_HOME_SECTION, PROJECTS, SERVICES, TESTIMONIES, TRUST_INDICATOR } from "@/constants";
+import { EMPLOYEE, TRUST_INDICATOR } from "@/constants";
 import AboutSectionContent from "@/content/AboutSectionContent";
-import HomeJumbotronContent from "@/content/HomeJumbotronContent";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
 
 const JumbotronSection = () => {
   return (
@@ -82,156 +76,74 @@ export default function page() {
         </div>
       </section>
 
-      {/* service section */}
-      <section id="services" className="py-20">
-        <div className="content-wrapper container-px flex flex-col gap-10 items-center">
-          {/* heading */}
-          <SectionHeading icon={<GearIcon size={15} color='' style='text-blue-800' />} iconLabel="tentang kami" iconColor="bg-blue-100" heading="layanan kami" headingColor="text-gra-900" paragraph="Kami menyediakan berbagai layanan teknologi profesional yang dirancang khusus untuk memenuhi kebutuhan dan mengakselerasi pertumbuhan bisnis Anda" paragraphColor="text-gray-600" />
+      <section id="vision" className="py-20 relative overflow-hidden">
+        {/* BG Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.3) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
 
-          {/* services */}
-          <div className="w-full xl:w-[80%] grid gird-cols-1 md:grid-cols-2 gap-6 lg:flex lg:items-start lg:justify-between">
-            {SERVICES.map((item:any) => (
-              <div className="" key={item.id}>
-                <ServiceCard content={item} />
-              </div>
-            ))}
-          </div>
-          
-          {/* see more button */}
-          <div className="w-full flex items-center justify-center">
-            <Link href={'#'}>
-            <BgButton style='w-full flex justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700' content={
-              <div className='flex items-center gap-3'>
-                <span className='capitalize text-sm text-white'>pelajari lebih lanjut</span>
-                <ArrowRightIcon size={15} color='white' />
-              </div>
-            } />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="project" className="py-20">
-        <div className="content-wrapper container-px flex flex-col gap-10 items-center">
+        <div className="content-wrapper relative container-px flex flex-col gap-10 items-center">
           {/* heading */}
-          <SectionHeading icon={<GearIcon size={15} color='' style='text-blue-800' />} iconLabel="portofolio kami" iconColor="bg-blue-100" heading="proyek terbaik" headingColor="text-gra-900" paragraph="Lihat showcase project-project unggulan yang telah kami selesaikan dengan tingkat kepuasan klien yang tinggi dan hasil yang memukau" paragraphColor="text-gray-600" />
-          {/* heading */}
-          
-          {/* projects */}
-          <div className="w-full xl:w-[80%] grid gird-cols-1 md:grid-cols-2 gap-6 lg:flex lg:items-start lg:justify-between">
-            {PROJECTS.map((item:any) => (
-              <div className="" key={item.id}>
-                <ProjectCard content={item} />
-              </div>
-            ))}
-          </div>
-          {/* projects */}
-
-          {/* see more button */}
-          <div className="w-full flex items-center justify-center">
-            <Link href={'#'}>
-            <BgButton style='w-full flex justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700' content={
-              <div className='flex items-center gap-3'>
-                <span className='capitalize text-sm text-white'>lihat semua proyek</span>
-                <ArrowRightIcon size={15} color='white' />
-              </div>
-            } />
-            </Link>
-          </div>
-          {/* see more button */}
-        </div>
-      </section>
-
-      <section id="testiomoni" className="py-20">
-        <div className="content-wrapper container-px flex flex-col gap-10 items-center">
-          {/* heading */}
-          <SectionHeading icon={<GearIcon size={15} color='' style='text-orange-800' />} iconLabel="portofolio kami" iconColor="bg-orange-100" heading="kata mereka" headingColor="text-gra-900" paragraph="Kepuasan dan kepercayaan klien adalah prioritas utama kami. Berikut adalah testimoni dari klien-klien yang telah merasakan layanan terbaik kami" paragraphColor="text-gray-600" />
+          <SectionHeading icon={<GearIcon size={15} color='' style='text-orange-800' />} iconLabel="portofolio kami" iconColor="bg-white shadow-md text-blue-800" heading="panduan langkah kami" headingColor="text-black" />
           {/* heading */}
 
-          {/* testimonies */}
-          <div className="w-full xl:w-[80%] grid gird-cols-1 md:grid-cols-2 gap-6 lg:flex lg:items-start lg:justify-between">
-            {TESTIMONIES.map((item:any) => (
-              <div className="" key={item.id}>
-                <TestimoniCard content={item} />
-              </div>
-            ))}
-          </div>
-          {/* testimonies */}
-
-          {/* trust indicator */}
-          <div className="w-full flex items-center justify-center">
-            <div className="flex items-center gap-6">
-              {TRUST_INDICATOR.map((item:any) => (
-                <div key={item.id} className="flex flex-col items-center gap-1">
-                  <span className="font-bold text-lg">{item.number}</span>
-                  <span className="text-gray-700 text-sm">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* trust indicator */}
-        </div>
-      </section>
-
-      <section id="whyChooseUs" className="py-20">
-        <div className="content-wrapper container-px flex flex-col gap-10 items-center">
-          {/* heading */}
-          <SectionHeading icon={<GearIcon size={15} color='' style='text-red-800' />} iconLabel="keunggulan kami" iconColor="bg-red-100" heading="mengapa memilih kami?" headingColor="text-gra-900" paragraph="Berbagai keunggulan dan alasan mengapa kami menjadi pilihan terbaik untuk partner bisnis Anda" paragraphColor="text-gray-600" />
-          {/* heading */}
-
-          {/* why us */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[...Array(6)].map((_, idx:number) => (
+          {/* visions */}
+          <div className="w-full xl:w-[80%] gap-10 flex flex-col md:flex-row items-center justify-between">
+            {[...Array(2)].map((_, idx:number) => (
               <WhyUsCard key={idx} item={{
-                title: 'tim berpengalaman',
-                paragraph: 'Didukung oleh tim profesional dengan pengalaman lebih dari 5 tahun di industri teknologi dan telah menangani berbagai proyek skala enterprise.',
-                icon: <UserIcon size={20} color="white" />
+                icon: <UserIcon size={20} color="white" />,
+                title: 'visi kami',
+                paragraph: 'Menjadi perusahaan teknologi terdepan di Indonesia yang memberikan solusi digital inovatif dan berkelanjutan'
               }} />
             ))}
           </div>
-
-          {/* see more button */}
-          <div className="w-full flex items-center justify-center">
-            <Link href={'#'}>
-              <BgButton style='w-full flex justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white' content={
-                <div className='flex items-center gap-3'>
-                  <span className='capitalize text-sm text-white'>mari berkolaborasi</span>
-                  <ArrowRightIcon size={15} color='white' />
-                </div>
-              } />
-            </Link>
-          </div>
-          {/* see more button */}
+          {/* testimonies */}
         </div>
       </section>
 
-      <section id="article" className="py-20">
+      <section id="ourValue" className="py-20">
         <div className="content-wrapper container-px flex flex-col gap-10 items-center">
           {/* heading */}
-          <SectionHeading icon={<GearIcon size={15} color='' style='text-purple-800' />} iconLabel="blog & insight" iconColor="bg-purple-100" heading="artikel terbaru" headingColor="text-gray-900" paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta sit alias dignissimos!" paragraphColor="text-gray-600" />
+          <SectionHeading icon={<GearIcon size={15} color='' style='text-blue-800' />} iconLabel="nilai-nilai kami" iconColor="bg-blue-100 text-blue-800" heading="fondasi kekuatan" headingColor="text-gra-900" paragraph="Berbagai keunggulan dan alasan mengapa kami menjadi pilihan terbaik untuk partner bisnis Anda" paragraphColor="text-gray-600" />
           {/* heading */}
 
-          {/* article */}
-          <div className="w-full xl:w-[80%] grid gird-cols-1 md:grid-cols-2 gap-6 lg:flex lg:items-start lg:justify-between">
-            {[...Array(3)].map((_, idx:number) => (
-              <div className="" key={idx}>
-                <ArticleCard item={ARTICLES} />
+          {/* why us */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[...Array(4)].map((_, idx:number) => (
+              <div key={idx} className="card-hover text-center bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-orange-200 rounded-full -translate-y-10 translate-x-10 opacity-30"></div>
+                <div className="relative">
+                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <UserIcon size={20} color="white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Kolaborasi</h3>
+                  <p className="text-gray-700 leading-relaxed font-medium">Membangun kemitraan jangka panjang yang saling menguntungkan</p>
+                </div>
               </div>
             ))}
           </div>
-          
-          {/* see more button */}
-          <div className="w-full flex items-center justify-center">
-            <Link href={'#'}>
-              <BgButton style='w-full flex justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white' content={
-                <div className='flex items-center gap-3'>
-                  <span className='capitalize text-sm text-white'>lihat semua artikel</span>
-                  <ArrowRightIcon size={15} color='white' />
-                </div>
-              } />
-            </Link>
+        </div>
+      </section>
+
+      <section id="employees" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        {/* bg element */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-100 rounded-full -translate-x-48 -translate-y-48 opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100 rounded-full translate-x-48 translate-y-48 opacity-30"></div>
+
+        {/* content */}
+        <div className="content-wrapper container-px flex flex-col gap-10 items-center">
+          {/* heading */}
+          <SectionHeading icon={<GearIcon size={15} color='' style='text-blue-800' />} iconLabel="tim kami" iconColor="bg-white border shadow-md" heading="tim manajemen" headingColor="text-gray-900" paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta sit alias dignissimos!" paragraphColor="text-gray-600" />
+          {/* heading */}
+
+          {/* employees */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-3 xl:grid-cols-4">
+            {[...Array(6)].map((_, idx:number) => (
+              <EmployeeCard key={idx} item={EMPLOYEE} />
+            ))}
           </div>
-          {/* see more button */}
         </div>
       </section>
 

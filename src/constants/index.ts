@@ -45,7 +45,7 @@ export const NAV_LINKS:LINK_PROP[] = [
   {
     id: 4,
     label: 'layanan',
-    link: '#'
+    link: '/service'
   },
   {
     id: 5,
@@ -210,4 +210,11 @@ export const ARTICLES = {
   type: 'Technology Trends',
   time: '8 min',
   image: '/image/article1.png'
+}
+
+export const EMPLOYEE = {
+  name: 'andi wijaya',
+  position: 'Chief Executive Officer',
+  desc: 'Dengan pengalaman lebih dari 15 tahun di industri teknologi, Andi memimpin visi strategis perusahaan...',
+  picture: '/image/avatar.jpg'
 }
