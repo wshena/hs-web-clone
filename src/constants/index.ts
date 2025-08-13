@@ -50,27 +50,27 @@ export const NAV_LINKS:LINK_PROP[] = [
   {
     id: 5,
     label: 'karier',
-    link: '#'
+    link: '/career'
   },
   {
     id: 6,
     label: 'projek',
-    link: '#'
+    link: '/project'
   },
   {
     id: 7,
     label: 'blog',
-    link: '#'
+    link: '/blog'
   },
   {
     id: 8,
     label: 'galeri',
-    link: '#'
+    link: '/galery'
   },
   {
     id: 9,
     label: 'kontak',
-    link: '#'
+    link: '/contact'
   },
 ]
 
@@ -241,5 +241,19 @@ export const PRODUCT = {
       label: 'bukalapak',
       link: '#'
     },
+  ]
+}
+
+export const JOB = {
+  position: 'UI/UX Designer',
+  type: 'full time',
+  desc: "Kami mencari UI/UX Designer yang kreatif dan detail untuk merancang pengalaman pengguna yang luar biasa. Anda akan bekerja sama dengan tim product dan development untuk menciptakan desain yang user-friendly dan engaging.",
+  location: 'Jakarta',
+  salary: 'Rp. 10.000.000 - Rp. 18.000.000',
+  deadline: '23 Agustus 2025',
+  skill: [
+    'Minimal 2 tahun pengalaman UI/UX design',
+    'Minimal 2 tahun pengalaman UI/UX design',
+    'Minimal 2 tahun pengalaman UI/UX design',
   ]
 }
