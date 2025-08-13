@@ -40,7 +40,7 @@ export const NAV_LINKS:LINK_PROP[] = [
   {
     id: 3,
     label: 'produk',
-    link: '#'
+    link: '/product'
   },
   {
     id: 4,
@@ -217,4 +217,29 @@ export const EMPLOYEE = {
   position: 'Chief Executive Officer',
   desc: 'Dengan pengalaman lebih dari 15 tahun di industri teknologi, Andi memimpin visi strategis perusahaan...',
   picture: '/image/avatar.jpg'
+}
+
+export const PRODUCT = {
+  name: 'kripik singkon balado pedas original',
+  company: 'kripik nusantara',
+  category: 'makanan dan minuman',
+  desc: 'Keripik singkong dengan bumbu balado pedas yang nagih',
+  price: 'Rp.25.000',
+  discount: '0%',
+  priceAfterDiscount: 'Rp.25.000',
+  stock: 'in stock',
+  link: [
+    {
+      label: 'shopee',
+      link: '#'
+    },
+    {
+      label: 'tokopedia',
+      link: '#'
+    },
+    {
+      label: 'bukalapak',
+      link: '#'
+    },
+  ]
 }

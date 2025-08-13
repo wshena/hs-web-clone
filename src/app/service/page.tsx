@@ -1,15 +1,11 @@
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
-import EmployeeCard from "@/components/cards/EmployeeCard";
 import ServiceCard from "@/components/cards/ServiceCard";
-import WhyUsCard from "@/components/cards/WhyUsCard";
-import { CallIcon, GearIcon, UserIcon } from "@/components/Icons";
+import { GearIcon, UserIcon } from "@/components/Icons";
 import Jumbotron from "@/components/Jumbotron";
 import MainWrapper from "@/components/MainWrapper";
 import SectionHeading from "@/components/SectionHeading";
-import { EMPLOYEE, SERVICES, TRUST_INDICATOR } from "@/constants";
-import AboutSectionContent from "@/content/AboutSectionContent";
-import Image from "next/image";
+import { SERVICES } from "@/constants";
 import Link from "next/link";
 
 const JumbotronSection = () => {

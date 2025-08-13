@@ -2,7 +2,11 @@ import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { IoCall, IoMenu } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaGears } from "react-icons/fa6";
-import { FaAngleDown, FaAngleUp, FaCheck, FaStar, FaArrowRight, FaUser } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaCheck, FaStar, FaArrowRight, FaUser, FaShoppingCart } from "react-icons/fa";
+
+export const CartIcon = ({color, size, style}:ICON_PROP) => {
+  return <FaShoppingCart color={color} size={size} className={style} />
+}
 
 export const UserIcon = ({color, size, style}:ICON_PROP) => {
   return <FaUser color={color} size={size} className={style} />
