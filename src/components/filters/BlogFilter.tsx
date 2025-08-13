@@ -2,7 +2,7 @@
 import React, { FormEvent, useCallback } from 'react'
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 
-const JobFilter = () => {
+const BlogFilter = () => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -33,43 +33,30 @@ const JobFilter = () => {
       onSubmit={handleSubmit}
       className="w-full p-5 border shadow-md rounded-md flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center justify-between gap-5"
     >
-      {/* Search product */}
+      {/* Search article */}
       <input
         type="text"
         name="search" // Nama parameter untuk query string
         id="job-name"
         defaultValue={searchParams?.get('search') || ''}
-        placeholder="Cari posisi"
+        placeholder="Cari artikel"
         className="w-full lg:w-[70%] p-3 border rounded-md"
       />
 
-      {/* location */}
+      {/* category */}
         <select
-          name="location"
-          id="location"
-          defaultValue={searchParams?.get('location') || ''}
+          name="category"
+          id="category"
+          defaultValue={searchParams?.get('category') || ''}
           className="p-3 border rounded-md bg-white min-w-[200px]"
         >
-          <option value="">Semua Lokasi</option>
-          <option value="jakarta">Jakarta</option>
-          <option value="bandung">Bandung</option>
-          <option value="surabaya">Surabaya</option>
-          <option value="remote">Remote</option>
+          <option value="">Semua kategory</option>
+          <option value="technologi-trends">Technology Trends</option>
+          <option value="web-development">Web Development</option>
+          <option value="mobile-development">Mobile Development</option>
+          <option value="digital-business">Digital Business</option>
+          <option value="ui-design">UI/UX Design</option>
         </select>
-
-      {/* type */}
-      <select
-          name="type"
-          id="type"
-          defaultValue={searchParams?.get('type') || ''}
-          className="p-3 border rounded-md bg-white min-w-[200px]"
-        >
-          <option value="">Semua Jenis</option>
-          <option value="fullTime">Full Time</option>
-          <option value="partTime">Part Time</option>
-          <option value="contract">Contract</option>
-          <option value="internship">Internship</option>
-      </select>
 
       {/* Tombol Submit dan Reset */}
       <button
@@ -82,4 +69,4 @@ const JobFilter = () => {
   )
 }
 
-export default JobFilter
+export default BlogFilter

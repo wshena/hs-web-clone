@@ -56,7 +56,7 @@ const ArticleCard = ({item}:{item:Props}) => {
           </div>
 
           {/* read button */}
-          <Link href={'#'} className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold transition-colors capitalize">
+          <Link href={'#'} className="inline-flex items-center gap-3 text-purple-600 hover:text-purple-700 font-semibold transition-colors capitalize">
             <span>baca</span>
             <ArrowRightIcon size={15} style='text-purple-600' />
           </Link>
