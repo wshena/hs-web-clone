@@ -257,3 +257,31 @@ export const JOB = {
     'Minimal 2 tahun pengalaman UI/UX design',
   ]
 }
+
+export const PROJECT_TABS = [
+  {
+    id: 1,
+    label: 'semua project',
+    link: '/project'
+  },
+  {
+    id: 2,
+    label: 'aplikasi web',
+    link: '/product?category=aplikasi-web'
+  },
+  {
+    id: 3,
+    label: 'aplikasi mobile',
+    link: '/product?category=aplikasi-mobile'
+  },
+  {
+    id: 4,
+    label: 'sistem enterprise',
+    link: '/product?category=sistem-enterprise'
+  },
+  {
+    id: 5,
+    label: 'e-Commerce',
+    link: '/product?category=e-commerce'
+  },
+]
