@@ -14,6 +14,7 @@ import { ARTICLES, EMPLOYEE, JOB, TRUST_INDICATOR } from "@/constants";
 import AboutSectionContent from "@/content/AboutSectionContent";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const JumbotronSection = () => {
   return (
@@ -33,7 +34,9 @@ export default function page() {
       {/* article filter */}
       <section id="jobFilter" className="py-10">
         <div className="content-wrapper container-px flex items-center justify-center">
-          <BlogFilter />
+          <Suspense fallback={<div>Loading filter...</div>}>
+            <BlogFilter />
+          </Suspense>
         </div>
       </section>
 
