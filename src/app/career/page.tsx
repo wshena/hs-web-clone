@@ -1,3 +1,4 @@
+'use client'
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
 import EmployeeCard from "@/components/cards/EmployeeCard";
