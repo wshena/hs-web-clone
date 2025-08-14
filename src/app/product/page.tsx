@@ -6,6 +6,7 @@ import Jumbotron from "@/components/Jumbotron";
 import MainWrapper from "@/components/MainWrapper";
 import ProductPagination from "@/components/pagination/ProductPagination";
 import { PRODUCT } from "@/constants";
+import { Suspense } from "react";
 
 const JumbotronSection = () => {
   return (
@@ -46,7 +47,11 @@ export default async function page({searchParams}:{searchParams:any}) {
       {/* product pagination */}
       <section id="pagination" className="pb-20">
         <div className="container-px content-wrapper">
-          <ProductPagination count={17} pageSize={12} defaultPage={1} />
+          <Suspense fallback={
+            <div>Loading Pagination</div>
+          }>
+            <ProductPagination count={17} pageSize={12} defaultPage={1} />
+          </Suspense>
         </div>
       </section>
 
