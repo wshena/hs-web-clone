@@ -15,6 +15,7 @@ import { ARTICLES, EMPLOYEE, JOB, TRUST_INDICATOR } from "@/constants";
 import AboutSectionContent from "@/content/AboutSectionContent";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const JumbotronSection = () => {
   return (
@@ -53,7 +54,9 @@ export default function page() {
       {/* galery filter */}
       <section id="jobFilter" className="py-10">
         <div className="content-wrapper container-px flex items-center flex-col gap-3">
-          <GaleryFilter />
+          <Suspense fallback={<div>Loading filter...</div>}>
+            <GaleryFilter />
+          </Suspense>
           <div className="w-full gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[...Array(7)].map((_, idx:number) => (
               <GaleryCard key={idx} item={{
