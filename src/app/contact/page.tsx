@@ -86,7 +86,7 @@ export default function page() {
               {/* social media */}
               <div className="">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Ikuti Kami</h3>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap md:flex-nowrap gap-4">
                   {[...Array(5)].map((_,idx:number) => (
                     <Link key={idx} href="#" target="_blank" className="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-lg flex items-center justify-center transition-colors">
                       <i className="fab fa-facebook-f"></i>
@@ -114,7 +114,7 @@ export default function page() {
           {/* map */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="h-96">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.429567515652!2d106.74122750759125!3d-6.216511037883081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7a8f4617e2f%3A0xa4321d2dfd4e98d7!2sSinergi%20Marmer!5e0!3m2!1sen!2sid!4v1752674545937!5m2!1sen!2sid" width="600" height="450" style={{
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.429567515652!2d106.74122750759125!3d-6.216511037883081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7a8f4617e2f%3A0xa4321d2dfd4e98d7!2sSinergi%20Marmer!5e0!3m2!1sen!2sid!4v1752674545937!5m2!1sen!2sid" width="600" height="450" className="w-fit" style={{
                 border: '0px'
               }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
