@@ -1,3 +1,4 @@
+'use client'
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
 import ArticleCard from "@/components/cards/ArticleCard";
@@ -23,70 +24,6 @@ const JumbotronSection = () => {
   )
 }
 
-const WhyChooseUsBlock = () => {
-  return (
-    <div className="flex flex-col items-center gap-3 text-center">
-      {/* icon */}
-      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-        <UserIcon size={20} color="" style="text-blue-800" />
-      </div>
-
-      <h3 className="text-xl font-bold text-gray-900 mb-4">Inovasi Berkelanjutan</h3>
-      <p className="text-gray-600">Bekerja dengan teknologi terdepan dan berkontribusi pada proyek-proyek yang mengubah industri</p>
-    </div>
-  )
-}
-
-const JobCard = ({item}:{item:{
-  position: string,
-  type: string,
-  desc: string,
-  location: string,
-  salary: string,
-  deadline: string,
-  skill: string[]
-}}) => {
-  return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border">
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        {/* job content */}
-        <div className="flex flex-col">
-          {/* position */}
-          <div className="flex items-center gap-3 mb-4">
-            <Link href={'#'} className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-              {item.position}
-            </Link>
-            <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">{item.type}</span>
-          </div>
-          
-          {/* description */}
-          <p className="text-gray-600 mb-4 line-clamp-2">{item.desc}</p>
-
-          {/* location, salary, and deadline */}
-          <div className="mb-4 flex flex-wrap items-center gap-6 text-sm text-gray-600">
-            <span>{item.location}</span>
-            <span>{item.salary}</span>
-            <span>{item.deadline}</span>
-          </div>
-
-          {/* requirement */}
-          <div className="flex flex-wrap gap-2">
-            {item.skill.map((item:string, idx:number) => (
-              <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">{item}</span>
-            ))}
-          </div>
-        </div>
-
-        {/* buttons */}
-        <div className="mt-6 lg:mt-0 lg:ml-8 flex flex-col sm:flex-row lg:flex-col gap-3">
-          <Link href="https://www.comprof-laravel02.hancode.my.id/karier/ui-ux-designer" className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors text-center">Lihat Detail</Link>
-          <Link href="https://www.comprof-laravel02.hancode.my.id/karier/ui-ux-designer/apply" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-xl font-medium hover:bg-blue-600 hover:text-white transition-colors text-center">Lamar Sekarang</Link>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export default function page() {
   return (
     <MainWrapper>
@@ -99,8 +36,6 @@ export default function page() {
           <BlogFilter />
         </div>
       </section>
-
-
 
       {/* article grid */}
       <section className="articles py-10">
